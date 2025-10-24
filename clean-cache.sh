@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -rf ~/.local/share/nvim &&
+  rm -rf ~/.local/state/nvim &&
+  rm -rf ~/.cache/nvim &&
+  echo "\n✅ Neovim cache cleaned"
