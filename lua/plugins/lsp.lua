@@ -6,6 +6,8 @@ return {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
     dependencies = {
+      -- NOTE: To get a list of mason packages that can be installed with
+      -- ensure_installed check: https://mason-registry.dev/registry/list
       "mason.nvim",
       { "mason-org/mason-lspconfig.nvim", config = function() end },
     },
