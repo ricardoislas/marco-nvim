@@ -1,4 +1,22 @@
 {
+  "react-component": {
+    "prefix": "comp",
+    "body": "function ${1:ComponentWithProps}(props : {${2}}) {\n\t${0}\n\t\n\treturn (\n\t\t<$3>\n\t\t\t${4}\n\t\t</${3}>\n\t)\n}",
+
+    "description": "Creates a React component"
+  },
+  "react-exported-component": {
+    "prefix": "compe",
+    "body": "export function ${1:ComponentWithProps}(props : {${2}}) {\n\t${0}\n\t\n\treturn (\n\t\t<$3>\n\t\t\t${4}\n\t\t</${3}>\n\t)\n}",
+
+    "description": "Creates a React component"
+  },
+  "react-default-component": {
+    "prefix": "compd",
+    "body": "export default function ${1:ComponentWithProps}(props : {${2}}) {\n\t${0}\n\t\n\treturn (\n\t\t<$3>\n\t\t\t${4}\n\t\t</${3}>\n\t)\n}",
+
+    "description": "Creates a Default React component"
+  },
   "destructuring of props": {
     "prefix": "dp",
     "body": ["const { ${1:name} } = this.props"]
