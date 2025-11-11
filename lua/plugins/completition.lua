@@ -14,7 +14,6 @@ return {
       "sources.default",
     },
     dependencies = {
-      "rafamadriz/friendly-snippets",
       -- add blink.compat to dependencies
       {
         "saghen/blink.compat",
@@ -224,28 +223,24 @@ return {
     build = (not LazyVim.is_win()) and "echo 'NOTE: jsregexp is optional, so\
         not a big deal if it fails to build'; make install_jsregexp" or nil,
     dependencies = {
-      {
-        "rafamadriz/friendly-snippets",
-        config = function()
-          require("luasnip.loaders.from_vscode").lazy_load()
-          require("luasnip.loaders.from_vscode").lazy_load({
-            paths = { vim.fn.stdpath("config") .. "/snippets" },
-          })
-        end,
-      },
+      -- {
+      --   "rafamadriz/friendly-snippets",
+      --   config = function()
+      --     require("luasnip.loaders.from_vscode").lazy_load()
+      --     require("luasnip.loaders.from_vscode").lazy_load({
+      --       paths = { vim.fn.stdpath("config") .. "/snippets" },
+      --     })
+      --   end,
+      -- },
     },
     opts = {
       history = true,
       delete_check_events = "TextChanged",
     },
-  },
-  -- friendly-snippets: Set of preconfigured snippets for different languages.
-  {
-    "rafamadriz/friendly-snippets",
     config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
+      print("runinng config function")
       require("luasnip.loaders.from_vscode").lazy_load({
-        paths = { vim.fn.stdpath("config") .. "/snippets" },
+        paths = { vim.fn.stdpath("config") .. "/lua/snippets" },
       })
     end,
   },
