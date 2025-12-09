@@ -14,6 +14,15 @@ return {
   cmd = "Neogit",
   keys = {
     { "<leader>gn", "<cmd>Neogit<cr>", desc = "Show Neogit UI" },
+    {
+      "<leader>gl",
+      function()
+        local actions = require("neogit.popups.log.actions")
+        local popup = require("neogit.popups.log").create()
+        actions.log_current(popup)
+      end,
+      desc = "Neogit Branch Log (current branch)",
+    },
   },
   opts = {
     -- Hides the hints at the top of the status buffer
