@@ -235,7 +235,6 @@ return {
       delete_check_events = "TextChanged",
     },
     config = function()
-      print("runinng config function")
       require("luasnip.loaders.from_vscode").lazy_load({
         paths = { vim.fn.stdpath("config") .. "/lua/snippets" },
       })
