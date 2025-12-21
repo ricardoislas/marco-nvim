@@ -23,6 +23,15 @@ return {
       end,
       desc = "Neogit Branch Log (current branch)",
     },
+    {
+      "<leader>gL",
+      function()
+        local actions = require("neogit.popups.log.actions")
+        local popup = require("neogit.popups.log").create()
+        actions.log_all_branches(popup)
+      end,
+      desc = "Neogit Branch Log (current branch)",
+    },
   },
   opts = {
     -- Hides the hints at the top of the status buffer
