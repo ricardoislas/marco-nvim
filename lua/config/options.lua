@@ -8,7 +8,3 @@ vim.g.lazyvim_picker = "snacks"
 
 -- Disable all animations
 vim.g.snacks_animate = false
-
--- Example: Append site path (directory used for parsers and queries) to runtimepath
-local site_path = vim.fn.stdpath("data") .. "/site"
-vim.opt.runtimepath:append(site_path)
